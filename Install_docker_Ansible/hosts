@@ -1,0 +1,2 @@
+[server1]
+10.29.111.110 ansible_user=vagrant ansible_ssh=vagrant

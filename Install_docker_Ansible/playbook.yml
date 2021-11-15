@@ -1,0 +1,23 @@
+---
+- name: Create vm
+  hosts: localhost
+  roles:
+  - vagrant_deploy
+
+- name: Install Docker
+  hosts: server1
+  become: yes
+  roles:
+  - ansible-role-docker
+
+#Testing
+# - name: Test on VM
+#   hosts: server1
+#   tasks:
+#   - name:
+#     file:
+#       path: /home/vagrant/test
+#       state: directory
+  
+
+

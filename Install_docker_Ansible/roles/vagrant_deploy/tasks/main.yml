@@ -1,0 +1,8 @@
+---
+- name: Execute a command
+  shell: |
+    cd '/Users/alexandrely/Documents/personal-work/perso/vagrant/Install_docker_Ansible'
+    vagrant up
+
+- name: Ajout de ma clé ssh dans la VM
+  command: sshpass -p vagrant ssh-copy-id -i /Users/alexandrely/.ssh/id_rsa.pub -o StrictHostKeyChecking=no vagrant@10.29.111.110
